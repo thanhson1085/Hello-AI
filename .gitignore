@@ -1,3 +1,4 @@
 env
 .*.sw*
 .DS_Store
+*.pyc
