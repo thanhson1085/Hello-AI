@@ -38,7 +38,6 @@ class CatOrDog():
             if (score > 0.5):
                 ret += human_string
 
-        print(ret)
         return ret
 
 
