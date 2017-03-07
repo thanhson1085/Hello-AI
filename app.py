@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, redirect, url_for
 from werkzeug import secure_filename
-import catordog
+from catordog import CatOrDog
 
 from os.path import basename
 
@@ -11,6 +11,9 @@ ALLOWED_EXTENSIONS = set(['jpg', 'jpeg'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+app.catordog = CatOrDog()
+
 
 
 def allowed_file(filename):
@@ -29,9 +32,8 @@ def upload_file():
 
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
-            thisis = catordog.run(file_path)
-            print(thisis[0])
-            os.rename(file_path, os.path.join(app.config['UPLOAD_FOLDER'], thisis[0] + '__' + filename))
+            thisis = app.catordog.run(file_path)
+            os.rename(file_path, os.path.join(app.config['UPLOAD_FOLDER'], thisis + '__' + filename))
 
 
             print("--- %s seconds ---" % str (time.time() - start_time))
@@ -74,8 +76,6 @@ app.add_url_rule('/uploads/<filename>', 'uploaded_file',
 app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
     '/uploads':  app.config['UPLOAD_FOLDER']
 })
-
-
 
 if __name__ == "__main__":
     app.debug=True
