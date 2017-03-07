@@ -1,0 +1,8 @@
+{
+  "name": "Hello AI",
+  "description": "Classtify Image - Dogs or Cats",
+  "image": "heroku/python",
+  "repository": "https://github.com/thanhson1085/Hello-AI.git",
+  "keywords": ["python", "flask", "tensorflow" ],
+  "addons": [ ]
+}
