@@ -43,7 +43,7 @@ def upload_file():
     from os.path import isfile, join
     htmlpic=""
     for f in listdir(UPLOAD_FOLDER):
-        if isfile(join(UPLOAD_FOLDER,f)):
+        if isfile(join(UPLOAD_FOLDER,f)) and f != '.gitignore':
             print(f)
             htmlpic += """<span>""" + f.split('__')[0] + """--></span>""" + """
                 <img width=200px height=150px src='uploads/"""+f+"""'>&nbsp;  &nbsp;
