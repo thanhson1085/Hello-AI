@@ -52,9 +52,8 @@ def upload_file():
     return '''
     <!doctype html>
     <head>
-        <meta http-equiv="refresh" content="10">
-    </head>
     <title>Cat Or Dog</title>
+    </head>
     <h1>Upload new File - Cat or Dog</h1>
     <form action="" method=post enctype=multipart/form-data>
       <p><input type=file name=file>
