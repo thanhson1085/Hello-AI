@@ -7,8 +7,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 label_lines = [line.rstrip() for line 
                    in tf.gfile.GFile(os.path.join(dir_path, "output/retrained_labels.txt"))]
 
-img_path = sys.argv[1]
-
 def run(image_path):
     image_data = tf.gfile.FastGFile(image_path, 'rb').read()
     # Unpersists graph from file
@@ -35,4 +33,3 @@ def run(image_path):
                 return (human_string, score)
 
 
-run(img_path)
