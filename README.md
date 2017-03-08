@@ -14,6 +14,7 @@ python app.py
 ```
 
 Access site: http://localhost:3000
+![cat or dog AI](https://sonnguyen.ws/wp-content/uploads/2017/03/Capture.jpg)
 
 ### Demo
 [https://thanhson1085-hello-ai.herokuapp.com/](https://thanhson1085-hello-ai.herokuapp.com/)
