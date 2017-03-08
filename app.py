@@ -5,7 +5,6 @@ from catordog import CatOrDog
 
 from os.path import basename
 
-
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg'])
 
@@ -13,8 +12,6 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 app.catordog = CatOrDog()
-
-
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -50,7 +47,6 @@ def upload_file():
             htmlpic += """<span>""" + f.split('__')[0] + """--></span>""" + """
                 <img width=200px height=150px src='uploads/"""+f+"""'>&nbsp;  &nbsp;
                 """
-
     return '''
     <!doctype html>
     <head>
