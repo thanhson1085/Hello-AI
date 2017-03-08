@@ -6,7 +6,7 @@ If you want to custom the AI, you just need to add/modify the training dataset, 
 ```
 bash train.sh
 ```
-After traning the AI, we have trained model file at: [Trained Model](https://github.com/thanhson1085/Hello-AI/tree/master/output)
+After traning the AI, we have the trained model file at: [Trained Model](https://github.com/thanhson1085/Hello-AI/tree/master/output)
 ### Run AI as a Service
 We are using Flask Framework to public AI as a Service via Web Interface.
 ```
