@@ -1,6 +1,9 @@
 This Application is used to classtify Dogs or Cats Images. It is using Tensorflow (InceptionV3) and build on Flask Framework.
 To train AI, I used the data at link: [Traning Dataset](https://github.com/thanhson1085/Hello-AI/tree/master/dataset/training_set)
 
+### Document
+See link [How to build a simple AI](https://sonnguyen.ws/first-ai-application/)
+
 If you want to custom the AI, you just need to add/modify the training dataset, or change the training model.
 ### Train your AI
 ```
